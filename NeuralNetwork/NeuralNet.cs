@@ -5,9 +5,9 @@ using System.Text;
 
 namespace NeuralNetwork
 {
-    class NeuralNet
+    public class NeuralNet
     {
-        public List<Layer> Layers;
+        List<Layer> Layers;
         public double[] Output => Layers.Last().Output;
 
         private List<Layer> oldLayers;
@@ -20,8 +20,10 @@ namespace NeuralNetwork
         /// <param name="layerNeurons">an array representing how many neurons are in each of the hidden layers and output layer of the neural network</param>
         public NeuralNet(Func<double, double> activation, int inputCount, params int[] layerNeurons)
         {
-            Layers = new List<Layer>();
-            Layers.Add(new Layer(activation, inputCount, layerNeurons[0]));
+            Layers = new List<Layer>
+            {
+                new Layer(activation, inputCount, layerNeurons[0])
+            };
             for (int i = 1; i < layerNeurons.Length; i++)
             {
                 //the number of inputs of a layer is the number of outputs of the previous layer

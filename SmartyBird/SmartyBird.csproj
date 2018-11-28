@@ -43,9 +43,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bird.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="PipePair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenSize.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

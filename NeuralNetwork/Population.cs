@@ -9,7 +9,7 @@ namespace NeuralNetwork
         private NeuralNet BestNet => networks[0];
 
         private List<NeuralNet> networks;
-        private int size;
+        private readonly int size;
 
         Random rng;
 

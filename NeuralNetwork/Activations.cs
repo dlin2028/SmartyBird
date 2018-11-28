@@ -14,7 +14,7 @@ namespace NeuralNetwork
         /// <returns>returns 0 if x is less than 0. otherwise 1</returns>
         public static double BinaryStep(double x)
         {
-            return x < 0 ? 0 : 1;
+            return x < 0.5 ? 0 : 1;
         }
 
         /// <summary>
