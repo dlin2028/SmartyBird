@@ -54,6 +54,8 @@ namespace SmartyBird
         {
             Update(pipes.ToArray());
         }
+
+        public double[] inputs;
         public void Update(PipePair[] pipes)
         {
             if (!IsAlive) return;
@@ -62,7 +64,7 @@ namespace SmartyBird
                                     .Where(pipe => pipe.X > Position.X - 50)
                                     .First();
 
-            double[] inputs = new double[3];
+            inputs = new double[3];
             inputs[0] = (double)closestPipe.X / ScreenSize.Width;
             inputs[1] = 0.5d + 0.5 * ((closestPipe.Height - Position.Y) / ScreenSize.Width);
             inputs[2] = (double)Position.Y / ScreenSize.Height;
